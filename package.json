@@ -1,0 +1,27 @@
+{
+  "name": "api-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cat .env.development > .env && nodemon --exec babel-node src/server.js",
+    "test": "cat .env.test > .env && npx prisma migrate reset -f && jest --detectOpenHandles"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/node": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "dotenv": "^10.0.0",
+    "jest": "^27.3.1",
+    "nodemon": "^2.0.14",
+    "prisma": "^3.3.0",
+    "supertest": "^6.1.6"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.3.0",
+    "express": "^4.17.1"
+  }
+}
